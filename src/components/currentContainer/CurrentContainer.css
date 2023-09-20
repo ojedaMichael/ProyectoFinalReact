@@ -1,24 +1,50 @@
 *{
     margin: 0%;
 }
+.date{
+    display: block;
+    font-size: 1.17em;
+    font-weight: bold;
+    margin: 2rem;
+}
 
 .divCurrentContainer{
     display: flex;
     flex-direction: column;
     height: 100vh;
-    width: 25vw;
+    width: 27rem;
     color: #e7e7eb;
     background-color: #1e213a;
     background-image: url("../../assets/Cloud-background.png");
     background-repeat: no-repeat;
     background-position: center;
 }
+.botonSearch{
+    background-color: rgb(110, 112, 122);
+    padding: 0.5rem;
+    border-radius: 3px;
+    color: #e7e7eb;
+    border: none;
+    font-size: small;
+}
 
+.botonLocation{
+    background-color:  rgb(110, 112, 122) ;
+    border-radius: 50px;
+    color: #e7e7eb;
+    padding: 0.1rem;
+    border: none;;
+}
 .divInput{
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    padding-top: 12px;
+    margin-top: 1rem;
+   
+}
+.divImg{
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
 }
 
 img{
@@ -26,16 +52,39 @@ img{
 }
 
 .currentImg{
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
+}
+.divTemp{
+    display: flex;
+    justify-content: center;
 }
 
-.divCurrent{
+.state{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 75%;
-    width: 100%;
-    font-family: Raleway,sans-serif;
+    justify-content: center;
+}
+
+.currentTemperature{
+   font-size: 4rem;
+}
+span{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: normal;
+    color: #a09fb1;
+}
+
+h2{
+  margin-top: 2rem;
+}
+
+.currentDate{
+   display: flex;
+   justify-content: center;
+}
+
+.divData{
+    display: flex;
+    justify-content: center;
 }

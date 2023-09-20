@@ -3,7 +3,11 @@ import "./Container.css"
 function Container() {
   return (
     <>
-        <div className="divContainer">Container</div>
+        <div className="divContainer">
+          <div className="cards">
+            
+          </div>
+        </div>
     </>
   
   )
