@@ -6,6 +6,7 @@ import useCurrent from "../../services/useCurrent";
 
 function CurrentContainer({ data, currentDate }) {
     const { handleSubmit } = useCurrent()
+    
     const [isVisible, setIsVisible] = useState(false)
     const toggleModal = () => {
         setIsVisible(!isVisible)

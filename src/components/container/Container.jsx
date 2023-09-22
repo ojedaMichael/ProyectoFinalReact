@@ -2,13 +2,13 @@ import "./Container.css"
 import shower from '../../assets/Shower.png';
 
 function Container({ data, dataForecast }) {
-  if (!data) {
+  if (!data || !dataForecast) {
     return <div>Cargando...</div>
 }
     const celsius = data.main.feels_like - 273.15
     const temperature = parseFloat(celsius.toFixed(0))
     const humidity = data.main.humidity
-    const days = dataForecast.list[0].dt_txt
+   
   return (
     
     <>
@@ -16,53 +16,58 @@ function Container({ data, dataForecast }) {
           <div className="cards">
             
             <div className="card">
-              <h3>{days}</h3>
+              <h3>{dataForecast.list[0].dt_txt.substr(0, 10)}</h3>
               <div className="divImgCard">
                 <img className="imgCard" src={shower} />
               </div>
               <div className="divSpan">
-              <span>{dataForecast.list[0].dt_txt}<span>18 °C</span></span>
+              <span>{Math.trunc(dataForecast.list[0].main.temp_max - 273.15)} <span>°C</span> </span>
+              <span>{Math.trunc(dataForecast.list[0].main.temp_min - 273.15)} <span>°C</span> </span>
+             
               </div>
             </div>
             
             <div className="card">
-              <h3>tomorrow</h3>
+              <h3>{dataForecast.list[2].dt_txt.substr(0, 10)}</h3>
               <div className="divImgCard">
                 <img className="imgCard" src={shower} />
               </div>
               <div className="divSpan">
-                <span>16 °C<span>18 °C</span></span>
+              <span>{Math.trunc(dataForecast.list[2].main.temp_max - 273.15)} <span>°C</span> </span>
+              <span>{Math.trunc(dataForecast.list[2].main.temp_min - 273.15)} <span>°C</span> </span>
               </div>
             </div>
             
             <div className="card">
-              <h3>tomorrow</h3>
+              <h3>{dataForecast.list[10].dt_txt.substr(0, 10)}</h3>
               <div className="divImgCard">
                 <img className="imgCard" src={shower} />
               </div>
               <div className="divSpan">
-              <span>16 °C <span>18 °C</span></span>
+              <span>{Math.trunc(dataForecast.list[10].main.temp_max - 273.15)} <span>°C</span> </span>
+              <span>{Math.trunc(dataForecast.list[10].main.temp_min - 273.15)} <span>°C</span> </span>
               </div>
             </div>
             
             <div className="card">
-              <h3>tomorrow</h3>
+              <h3>{dataForecast.list[18].dt_txt.substr(0, 10)}</h3>
               <div className="divImgCard">
                 <img className="imgCard" src={shower} />
               </div>
               <div className="divSpan">
-                <span>16 °C <span>18 °C</span></span>
-                
+              <span>{Math.trunc(dataForecast.list[18].main.temp_max - 273.15)} <span>°C</span> </span>
+              <span>{Math.trunc(dataForecast.list[18].main.temp_min - 273.15)} <span>°C</span> </span>
               </div>
             </div>
             
             <div className="card">
-              <h3>tomorrow</h3>
+              <h3>{dataForecast.list[26].dt_txt.substr(0, 10)}</h3>
               <div className="divImgCard">
                 <img className="imgCard" src={shower} />
               </div>
               <div className="divSpan">
-              <span>16  °C <span>18  °C</span></span>
+              <span >{Math.trunc(dataForecast.list[26].main.temp_max - 273.15)} <span>°C</span> </span>
+              <span>{Math.trunc(dataForecast.list[26].main.temp_min - 273.15)} <span>°C</span> </span>
               </div>
             </div>
             

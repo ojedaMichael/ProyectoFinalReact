@@ -6,7 +6,7 @@ import useCurrent from './services/useCurrent'
 
 
 function App() {
-  const { dataCurrent, currentDate, dataForecast, handleSubmit} = useCurrent()
+  const { dataCurrent, currentDate, dataForecast,} = useCurrent()
   return (
     <>
       <div className='divMain'>

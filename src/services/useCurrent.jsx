@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 
 function useCurrent() {
-    const [cityName, setCityName] = useState("maracaibo");
+    const [cityName, setCityName] = useState("london");
     const APIKEY1 = "5da38c0a7274e681169ae21b2869674a";
     const APIKEY2 = "dd02104e389c6561bd96f4e8abe4fef1";
   
@@ -32,13 +32,14 @@ function useCurrent() {
           console.error('Error al obtener datos de la API', error);
         }
       };
-      console.log(dataForecast);
+      
       getData();
     }, []);
   
     const handleSubmit = (e) => {
       e.preventDefault();
-      const citName = e.target[0].value;
+      const citName = e.target[0].value.toLowerCase();
+      console.log(citName);
       setCityName(citName);
     }
     return { dataCurrent, dataForecast, handleSubmit, currentDate}
