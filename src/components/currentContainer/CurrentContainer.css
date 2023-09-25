@@ -38,6 +38,10 @@
     padding: 0.1rem;
     border: none;;
 }
+
+.botonLocation:hover{
+    cursor: pointer;
+}
 .divInput{
     display: flex;
     justify-content: space-around;
@@ -91,3 +95,4 @@ h2{
     display: flex;
     justify-content: center;
 }
+

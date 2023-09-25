@@ -1,14 +1,15 @@
 
-import useCurrent from "../../services/useCurrent"
+
 import "./Modal.css"
 
-function Modal({toggleModal}) {
-  const { handleSubmit, handleClick } = useCurrent()
+function Modal({toggleModal, handleSubmit, handleClick}) {
   return (
 
     <div className='divModal'>
-        <div className="botonCerrar">
-            <button onClick={toggleModal}>cerrar</button>
+        <div className="divBotonCerrar">
+            <button className="botonCerrar" onClick={toggleModal}>
+              <span className="material-symbols-outlined">close</span>
+            </button>
         </div>
         <div className="divInput"> 
         <form onSubmit={handleSubmit}>

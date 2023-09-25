@@ -7,7 +7,7 @@
     width: 23rem;
     color: #e7e7eb;
     background-color: #1e213a;
-    
+
 }
 
 .divInput{
@@ -57,8 +57,16 @@
     margin: 1rem;;
 }
 
-.botonCerrar{
+.divBotonCerrar{
     display: flex;
     justify-content: end;
     margin: 1rem;
+    
+}
+
+.botonCerrar{
+    background-color: #1e213a;
+    border: none;
+    padding: 3px;
+    cursor: pointer;
 }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./CurrentContainer.css";
 import shower from "../../assets/Shower.png";
 
-function CurrentContainer({ data, currentDate, toggleModal }) {
+function CurrentContainer({ data, currentDate, toggleModal, geolocation }) {
   
 
   if (!data) {
@@ -13,7 +13,7 @@ function CurrentContainer({ data, currentDate, toggleModal }) {
   const temperature = parseFloat(celsius.toFixed(0));
   const weatherDescription = data.weather[0].description;
   const location = data.name;
-
+ 
   return (
     <>
       <div className="divCurrentContainer">
@@ -21,14 +21,14 @@ function CurrentContainer({ data, currentDate, toggleModal }) {
           <button onClick={toggleModal} className="botonSearch">
             search for places
           </button>
-          <button className="botonLocation">
+          <button onClick={geolocation} className="botonLocation">
             <span className="material-symbols-outlined">my_location</span>
           </button>
         </div>
         <div className="divCurrententDisplay">
           <div className="divCurrent">
             <div className="divImg">
-              <img className="currentImg" src={shower} alt="" />
+              <img className="currentImg" src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}></img>
             </div>
             <div className="divTemp">
               <h1 className="currentTemperature">

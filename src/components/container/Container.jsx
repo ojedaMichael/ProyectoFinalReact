@@ -1,5 +1,5 @@
 import "./Container.css"
-import shower from '../../assets/Shower.png';
+
 
 function Container({ data, dataForecast }) {
   if (!data || !dataForecast) {
@@ -8,7 +8,7 @@ function Container({ data, dataForecast }) {
     const celsius = data.main.feels_like - 273.15
     const temperature = parseFloat(celsius.toFixed(0))
     const humidity = data.main.humidity
-   
+
   return (
     
     <>
@@ -16,13 +16,14 @@ function Container({ data, dataForecast }) {
           <div className="cards">
             
             <div className="card">
-              <h3>{dataForecast.list[0].dt_txt.substr(0, 10)}</h3>
+              <h3>Tomorrow</h3>
               <div className="divImgCard">
-                <img className="imgCard" src={shower} />
+                <img className="imgCard" src={`https://openweathermap.org/img/wn/${dataForecast.list[0].weather[0].icon}@2x.png`} ></img >
+
               </div>
               <div className="divSpan">
-              <span>{Math.trunc(dataForecast.list[0].main.temp_max - 273.15)} <span>°C</span> </span>
-              <span>{Math.trunc(dataForecast.list[0].main.temp_min - 273.15)} <span>°C</span> </span>
+              <h3>{Math.trunc(dataForecast.list[0].main.temp_max - 273.15)} <h4>°C</h4> </h3>
+              <h3>{Math.trunc(dataForecast.list[0].main.temp_min - 273.15)} <h4>°C</h4> </h3>
              
               </div>
             </div>
@@ -30,44 +31,44 @@ function Container({ data, dataForecast }) {
             <div className="card">
               <h3>{dataForecast.list[2].dt_txt.substr(0, 10)}</h3>
               <div className="divImgCard">
-                <img className="imgCard" src={shower} />
+                <img className="imgCard" src={`https://openweathermap.org/img/wn/${dataForecast.list[2].weather[0].icon}@2x.png`} ></img >              
               </div>
               <div className="divSpan">
-              <span>{Math.trunc(dataForecast.list[2].main.temp_max - 273.15)} <span>°C</span> </span>
-              <span>{Math.trunc(dataForecast.list[2].main.temp_min - 273.15)} <span>°C</span> </span>
+                <h3>{Math.trunc(dataForecast.list[2].main.temp_max - 273.15)} <h4>°C</h4> </h3>
+                <h3>{Math.trunc(dataForecast.list[2].main.temp_min - 273.15)} <h4>°C</h4> </h3>
               </div>
             </div>
             
             <div className="card">
               <h3>{dataForecast.list[10].dt_txt.substr(0, 10)}</h3>
               <div className="divImgCard">
-                <img className="imgCard" src={shower} />
+                <img className="imgCard"src={`https://openweathermap.org/img/wn/${dataForecast.list[10].weather[0].icon}@2x.png`} ></img >
               </div>
               <div className="divSpan">
-              <span>{Math.trunc(dataForecast.list[10].main.temp_max - 273.15)} <span>°C</span> </span>
-              <span>{Math.trunc(dataForecast.list[10].main.temp_min - 273.15)} <span>°C</span> </span>
+              <h3>{Math.trunc(dataForecast.list[10].main.temp_max - 273.15)} <h4>°C</h4> </h3>
+              <h3>{Math.trunc(dataForecast.list[10].main.temp_min - 273.15)} <h4>°C</h4> </h3>
               </div>
             </div>
             
             <div className="card">
               <h3>{dataForecast.list[18].dt_txt.substr(0, 10)}</h3>
               <div className="divImgCard">
-                <img className="imgCard" src={shower} />
+                <img className="imgCard" src={`https://openweathermap.org/img/wn/${dataForecast.list[18].weather[0].icon}@2x.png`} ></img >
               </div>
               <div className="divSpan">
-              <span>{Math.trunc(dataForecast.list[18].main.temp_max - 273.15)} <span>°C</span> </span>
-              <span>{Math.trunc(dataForecast.list[18].main.temp_min - 273.15)} <span>°C</span> </span>
+              <h3>{Math.trunc(dataForecast.list[18].main.temp_max - 273.15)} <h4>°C</h4> </h3>
+              <h3>{Math.trunc(dataForecast.list[18].main.temp_min - 273.15)} <h4>°C</h4> </h3>
               </div>
             </div>
             
             <div className="card">
               <h3>{dataForecast.list[26].dt_txt.substr(0, 10)}</h3>
               <div className="divImgCard">
-                <img className="imgCard" src={shower} />
-              </div>
+                <img className="imgCard" src={`https://openweathermap.org/img/wn/${dataForecast.list[26].weather[0].icon}@2x.png`} ></img >
+                </div>
               <div className="divSpan">
-              <span >{Math.trunc(dataForecast.list[26].main.temp_max - 273.15)} <span>°C</span> </span>
-              <span>{Math.trunc(dataForecast.list[26].main.temp_min - 273.15)} <span>°C</span> </span>
+              <h3>{Math.trunc(dataForecast.list[26].main.temp_max - 273.15)} <h4>°C</h4> </h3>
+              <h3>{Math.trunc(dataForecast.list[26].main.temp_min - 273.15)} <h4>°C</h4> </h3>
               </div>
             </div>
             
@@ -88,7 +89,11 @@ function Container({ data, dataForecast }) {
                   <h3>Humidity</h3>
                   <p> {humidity} <span className="feature-unit">%</span></p>
                   <div className="porcentaje">
-                    <label >0     50    100 </label>
+                    <label className="labelProgres">
+                      <h1>0</h1>
+                      <h1>50</h1>
+                      <h1>100</h1>
+                    </label>
                     <progress id="file" max="100" value={humidity}></progress>
                     <label>%</label>
                   </div>
