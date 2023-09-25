@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+*{
+    margin: 0%;
+    font-family: Raleway;
+}
+.date{
+    display: block;
+    font-size: 1.17em;
+    font-weight: bold;
+    margin: 2rem;
+}
+
+.divCurrentContainer{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 27rem;
+    color: #e7e7eb;
+    background-color: #1e213a;
+    background-image: url("../../assets/Cloud-background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.botonSearch{
+    background-color: rgb(110, 112, 122);
+    padding: 0.5rem;
+    border-radius: 3px;
+    color: #e7e7eb;
+    border: none;
+    font-size: small;
+}
+
+.botonLocation{
+    background-color:  rgb(110, 112, 122) ;
+    border-radius: 50px;
+    color: #e7e7eb;
+    padding: 0.1rem;
+    border: none;;
+}
+
+.botonLocation:hover{
+    cursor: pointer;
+}
+.divInput{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+   
+}
+.divImg{
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
+}
+
+img{
+ width: 1rem;
+}
+
+.currentImg{
+    width: 200px;
+    height: 200px;
+}
+.divTemp{
+    display: flex;
+    justify-content: center;
+}
+
+.state{
+    display: flex;
+    justify-content: center;
+}
+
+.currentTemperature{
+   font-size: 4rem;
+}
+span{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: normal;
+    color: #a09fb1;
+}
+
+h2{
+  margin-top: 2rem;
+}
+
+.currentDate{
+   display: flex;
+   justify-content: center;
+}
+
+.divData{
+    display: flex;
+    justify-content: center;
+}
+

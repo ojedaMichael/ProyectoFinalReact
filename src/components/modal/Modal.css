@@ -1,0 +1,72 @@
+.divModal{
+    margin: 0%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 23rem;
+    color: #e7e7eb;
+    background-color: #1e213a;
+
+}
+
+.divInput{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.inputText{
+    background-color:#1e213a ;
+    color: #e7e7eb;
+    border: 1px solid #E7E7EB;
+    
+    padding: 8px;
+}
+
+.botonInput{
+    background-color: #3C47E9;
+    color: #e7e7eb;
+    border: none;
+    padding: 9px;
+    cursor: pointer;
+}
+
+.boton1:hover{
+    border: solid 1px #616475;
+}
+.boton1{
+    display: flex;
+    flex-direction: column;
+    background-color: #1e213a;
+    color: #e7e7eb;
+    border: none;
+    padding: 9px;
+    width: 14.5rem;
+    height: 3rem;
+    margin: 0.4rem;
+    margin-left: 3.1rem;
+    cursor: pointer;
+}
+
+.divBotons{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem;;
+}
+
+.divBotonCerrar{
+    display: flex;
+    justify-content: end;
+    margin: 1rem;
+    
+}
+
+.botonCerrar{
+    background-color: #1e213a;
+    border: none;
+    padding: 3px;
+    cursor: pointer;
+}
